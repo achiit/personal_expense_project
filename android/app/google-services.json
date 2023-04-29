@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "739797660364",
+    "project_id": "personalexpen-dd092",
+    "storage_bucket": "personalexpen-dd092.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739797660364:android:1c8b2790caf68782028869",
+        "android_client_info": {
+          "package_name": "com.example.personal_expense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739797660364-eqo6uflgndp45t5p4gcq86o0fmrdceu6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.personal_expense",
+            "certificate_hash": "27ac0c02d89afe7044b3282ce882913c19f9d400"
+          }
+        },
+        {
+          "client_id": "739797660364-7k4kqortivqocohf8vv3hn1696q44oi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwYnZpV0a8p2Da2V1rok2zTBmprB5JS18"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739797660364-7k4kqortivqocohf8vv3hn1696q44oi8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -6,6 +7,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:personal_expense/screens/Screens/otp_screen.dart';
 
 import '../../helper/textfield_stling.dart';
+import '../../signupmethods/google_sginin.dart';
 import '../../widgets/button_widgets.dart';
 import '../../widgets/custom_appbar.dart';
 
@@ -15,6 +17,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  bool _isSigningIn = false;
   bool? isChecked = false;
 
   String? _password;
@@ -151,7 +154,23 @@ class _SignUpState extends State<SignUp> {
                       Container(
                         width: 343,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () async {
+                            setState(() {
+                              _isSigningIn = true;
+                            });
+
+                            User? user = await Authentication.signInWithGoogle(
+                                context: context);
+
+                            setState(() {
+                              _isSigningIn = false;
+                            });
+
+                            if (user != null) {
+                              print("hello");
+                              Get.to(OtpScreen());
+                            }
+                          },
                           style: ElevatedButton.styleFrom(
                             elevation: 0,
                             backgroundColor: Colors.white,
